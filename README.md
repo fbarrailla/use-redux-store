@@ -63,6 +63,6 @@ const AnyComponent = props => {
 
 ## Todo
 
-- [] Improve documentation
-- [] Add unit tests
-- [] TypeScript support
+- [ ] Improve documentation
+- [ ] Add unit tests
+- [ ] TypeScript support
