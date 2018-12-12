@@ -1,4 +1,4 @@
-import { compose, combineReducers, createStore } from 'redux';
+import { applyMiddleware, compose, combineReducers, createStore } from 'redux';
 import makeStoreProvider from './makeStoreProvider';
 import useStore from './useStore';
 
