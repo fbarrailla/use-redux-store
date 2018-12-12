@@ -22,6 +22,7 @@ $ yarn add react@16.7.0-alpha.2 react-dom@16.7.0-alpha.2 redux
 store.js
 ```javascript
 import { initStore } from 'use-redux-store';
+import thunk from 'redux-thunk';
 import * as actions from './actions';
 import * as reducers from './reducers';
 import * as selectors from './selectors';
@@ -30,6 +31,7 @@ const store = initStore({
   reducers,
   actions, // action creators
   selectors,
+  middlewares: [thunk]
 });
 
 export const useStore = store.useStore;

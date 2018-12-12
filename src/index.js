@@ -1,4 +1,4 @@
-import { createStore, combineReducers } from 'redux';
+import { compose, combineReducers, createStore } from 'redux';
 import makeStoreProvider from './makeStoreProvider';
 import useStore from './useStore';
 
@@ -8,10 +8,12 @@ export function initStore({
   selectors = {},
   middlewares = [],
 }) {
-  const devTools =
-    window.__REDUX_DEVTOOLS_EXTENSION__ &&
-    window.__REDUX_DEVTOOLS_EXTENSION__();
-  const store = createStore(combineReducers(reducers), devTools);
+  const composeEnhancers =
+    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+  const store = createStore(
+    combineReducers(reducers),
+    composeEnhancers(applyMiddleware(...middlewares))
+  );
 
   return {
     useStore,
