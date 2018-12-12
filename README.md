@@ -5,6 +5,18 @@ use-redux-store
 
 Simplify React-Redux boilerplate providing a simple hook that gives you access to the current global state tree, action creators and selectors.
 
+## Installation
+
+```bash
+$ yarn add use-redux-store
+```
+
+⚠️ React, React-DOM, and Redux peer dependencies are required
+
+```bash
+$ yarn add react@16.7.0-alpha.2 react-dom@16.7.0-alpha.2 redux
+```
+
 ## Usage
 
 store.js
@@ -55,6 +67,8 @@ const AnyComponent = props => {
     </>
   )
 }
+
+export default AnyComponent;
 ```
 
 ## Examples
