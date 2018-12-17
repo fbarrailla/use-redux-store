@@ -80,5 +80,5 @@ export default AnyComponent;
 ## Todo
 
 - [ ] Improve documentation
-- [ ] Add unit tests
+- [x] Add unit tests
 - [ ] TypeScript support
